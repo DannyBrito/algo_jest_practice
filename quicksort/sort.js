@@ -26,7 +26,5 @@ function pivot(arr, start = 0, end = arr.length - 1) {
        return arr;
   } 
              
-  quickSort([100,-3,2,4,6,9,1,2,5,3,23])
-
   
   
