@@ -8,8 +8,7 @@ function pivot(arr, start = 0, end = arr.length - 1) {
   
     for (let i = start + 1; i <= end; i++) {
       if (pivot > arr[i]) {
-        swapIdx++;
-        swap(arr, swapIdx, i);
+        swapIdx++;swap(arr, swapIdx, i);
       }
     }
     swap(arr, start, swapIdx);
@@ -23,7 +22,7 @@ function pivot(arr, start = 0, end = arr.length - 1) {
           quickSort(arr,left,pivotIndex-1);
           quickSort(arr,pivotIndex+1,right);
         }
-       return arr;
+       return arr
   } 
              
   
