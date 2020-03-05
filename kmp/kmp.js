@@ -24,7 +24,6 @@ function lsp(pattern){
     }
     return result
 }
-
 // check if pattern is on text
 function findSubpathInText(text,pattern){
     const result = lsp(pattern)
@@ -44,6 +43,5 @@ function findSubpathInText(text,pattern){
     if(pointerPat === pattern.length) return true
     return false
 }
-
 
 export {lsp, findSubpathInText}
