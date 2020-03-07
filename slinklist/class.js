@@ -123,7 +123,6 @@ export class SingleLinkedList {
             prev = current
             current = next
         }
-
         return this
     }
 }
