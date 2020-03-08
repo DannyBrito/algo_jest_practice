@@ -33,3 +33,5 @@ class Queue {
             return removedNode.val
     }
 }
+
+export default Queue
