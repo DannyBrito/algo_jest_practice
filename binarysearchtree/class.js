@@ -62,10 +62,47 @@ class Bstree{
         queue.enqueue(node)
         while(queue.size){
             node = queue.dequeue()
-            result.push(node)
+            result.push(node.val)
             if(node.left) queue.enqueue(node.left)
             if(node.right) queue.enqueue(node.right)
         }
         return result
     }
+
+    DFSpreOrder(){
+        if(!this.root) return []
+        let result = []
+        function traverse(node){
+            result.push(node.val)
+            if(node.left) traverse(node.left)
+            if(node.right) traverse(node.right)
+        }
+        traverse(this.root)
+        return result
+    }
+
+    DFSpostOrder(){
+        if(!this.root) return[]
+        let result = []
+        function traverse(node){
+            if(node.left) traverse(node.left)
+            if(node.right) traverse(node.right)
+            result.push(node.val)
+        }
+        traverse(this.root)
+        return result
+    }
+
+    DFSinOrder(){
+        if(!this.root)return []
+        let result = []
+        function traverse(node){
+            if(node.left) traverse(node.left)
+            result.push(node.val)
+            if(node.right) traverse(node.right)
+        }
+        traverse(this.root)
+        return result
+    }
+
 }
