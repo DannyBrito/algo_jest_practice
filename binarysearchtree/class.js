@@ -8,13 +8,17 @@ class Node{
     }
 }
 
+
 class Bstree{
+
     constructor(){
         this.root = null
     }
 
     insert(value){
+        
         let newNode = new Node(value)
+
         if(!this.root){
             this.root = newNode
             return this
