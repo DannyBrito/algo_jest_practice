@@ -21,4 +21,36 @@ class Graph{
         this.adjacencyList[vertex].forEach(e => this.removeEdge(e,vertex))
         delete this.adjacencyList[vertex]
     }
+
+    depthFirstRecursive(start){
+        const result = []
+        const seen = {}
+        const dfs = vertex => {
+            if(!vertex) return null
+            seen[vertex] = true
+            result.push(vertex)
+            this.adjacencyList[vertex].forEach(e => {
+                if(!seen[e]) return dfs(e)
+            })
+        }
+        dfs(start)
+    }
+
+    depthFirstIterrative(start){
+        const stack = [start]
+        const result = []
+        const seen = {}
+        let currentVertex
+        while(stack.length){
+            currentVertex = stack.pop()
+            result.push(currentVertex)
+            this.adjacencyList[currentVertex].forEach(e =>{
+                if(!seen[e]){
+                    seen[e] = true
+                    stack.push(e)
+                }
+            })
+        }
+        return result
+    }
 }
