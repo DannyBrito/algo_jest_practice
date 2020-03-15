@@ -53,4 +53,25 @@ class Graph{
         }
         return result
     }
+    breadthFirst(start){
+        const queue = [start];
+        const result = [];
+        const seen = {};
+        let currentVertex;
+        seen[start] = true;
+
+        while(queue.length){
+            currentVertex = queue.shift();
+            result.push(currentVertex);
+           
+
+            this.adjacencyList[currentVertex].forEach(e => {
+                if(!seen[e]){
+                    seen[e] = true;
+                    queue.push(e);
+                }
+            });
+        }
+        return result;
+    }
 }
