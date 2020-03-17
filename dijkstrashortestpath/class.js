@@ -58,4 +58,41 @@ class WeightedGraph {
         }
         return path.concat(smallest).reverse()
     }
+
+    Djs(start,finish){
+        const distances = {}
+        const previous = {}
+        const priorityqueue = new PriorityQueue()
+        let smallest 
+        // initialized state 
+        for(const vertex in this.values){
+            if(vertex === start){
+                distances[vertex] = 0
+                priorityqueue.enqueue(vertex, 0)
+            }
+            else{
+                distances[vertex] = Infinity
+                priorityqueue.enqueue(vertex,Infinity)
+            }
+            previous[vertex] = null
+        }
+
+        while(priorityqueue.values.length){
+            smallest = priorityqueue.dequeue().val
+            if(smallest === finish){
+
+            }
+            if(smallest || distances[smallest] !== Infinity){
+                for(const neighbor in this.values[smallest]){
+                    let currentNeighbor = this.values[smallest][neighbor]
+                    let candidate = distances[smallest] + currentNeighbor.weight
+                    if(candidate < distances[currentNeighbor.node]){
+                        distances[currentNeighbor.node] = candidate
+                        previous[currentNeighbor.node] = smallest
+                        priorityqueue(currentNeighbor,candidate)
+                    }
+                }
+            }
+        }
+    }
 }
