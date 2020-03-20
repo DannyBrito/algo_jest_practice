@@ -84,7 +84,7 @@ class Bstree{
         traverse(this.root)
         return result
     }
-
+    
     DFSpostOrder(){
         if(!this.root) return[]
         let result = []
