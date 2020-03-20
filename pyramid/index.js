@@ -1,4 +1,4 @@
-function pyramid(n,row = 0,level = ''){
+const pyramid = (n,row = 0,level = '') => {
     let len = n * 2 - 1
     let mid = Math.floor(len/2)
     if(n === row)return
