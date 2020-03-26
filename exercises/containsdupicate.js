@@ -4,6 +4,9 @@ var containsDuplicate = function(nums) {
     for(const e of nums){
         // if existeng return true as there is duplicates
         if(seen[e]) return true
+        // if char found means duplicated
+        // set true on seen
+        
         seen[e] = true
     }
     return false
