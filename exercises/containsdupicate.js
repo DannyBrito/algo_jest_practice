@@ -5,7 +5,7 @@ var containsDuplicate = function(nums) {
         // if existeng return true as there is duplicates
         if(seen[e]) return true
         // if char found means duplicated
-    
+        // save if character no found on seen
         seen[e] = true
     }
     return false
