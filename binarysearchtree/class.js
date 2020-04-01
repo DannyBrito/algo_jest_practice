@@ -1,6 +1,7 @@
 import Queue from '../queue/class'
 
 class Node{
+    // initialize with a value and node left and right
     constructor(val){
         this.val = val
         this.left = null
