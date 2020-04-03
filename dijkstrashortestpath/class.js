@@ -17,6 +17,7 @@ class WeightedGraph {
 
     Dijkstra(start,finish){
         const nodes = new PriorityQueue()
+        // using a priorityQueue
         const distances = {}
         const previous = {}
         const path = []
