@@ -1,4 +1,5 @@
 function bubbleSort(arr){
+    // swap to order
     for(let i = arr.length; i > 0; i--){
         let notSwap = true
         for(let j = 0; j < i-1; j++){
