@@ -11,7 +11,7 @@ class Node{
 
 
 class Bstree{
-
+    // initialize binary search tree with root element to null
     constructor(){
         this.root = null
     }
