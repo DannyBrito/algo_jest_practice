@@ -1,5 +1,6 @@
 class Node {
     constructor(val){
+        // difference to track a previous for each node compare to single-link-list
         this.val = val
         this.next = null
         this.prev = null
