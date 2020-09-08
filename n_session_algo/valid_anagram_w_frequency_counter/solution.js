@@ -1,3 +1,4 @@
+// solution implementing frequency counter path where an object/set is used to keep track of input to compare to other input/data
 
 export const validAnagram = (str1,str2) =>{
     if(str1.length !== str2.length) return false
@@ -8,6 +9,6 @@ export const validAnagram = (str1,str2) =>{
         if(!frequency[val]) return false
         else --frequency[val]
     }
-    
+
     return true
 }
