@@ -22,7 +22,7 @@ export const paintFences = (fences,colors) =>{
     let same = colors
     // the second case where there are two fences with different colors whe can see how for the first fence with have N = total colors avalible. But for second fence we need to exclude previous color from our avalible color. This can be represented by N - 1 = colors minus previous option * previous fence option N
     let different = colors * (colors - 1)
-    if(fences === 2) return same * different
+    if(fences === 2) return same + different
     // we need to built our result by prev returns meaning we need to keep track of previous Possibilities.
     let [prevSame,prevDiff] = [same,different]
     // we are going to iterrate all necessary times to find possible results for fences starting at 3 to N fences.
